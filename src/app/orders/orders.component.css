@@ -1,0 +1,30 @@
+.order-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 650px
+  }
+  
+  .order-details {
+    margin-bottom: 10px;
+  }
+  
+  .product-details div {
+    margin-bottom: 5px;
+  }
+  
+  .product-name {
+    display: inline-block;
+    width: 500px;
+    font-weight: bold;
+  }
+  
+  .product-price {
+    margin-left: 10px;
+  }
+
+ .total{
+    display: inline;
+    margin-left: 505px;
+ }

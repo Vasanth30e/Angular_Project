@@ -1,0 +1,34 @@
+<h2>Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && formControls['email'].errors }">
+    <div *ngIf="submitted && formControls['email'].hasError('required')" class="invalid-feedback">
+      Email is required.
+    </div>
+    <div *ngIf="submitted && formControls['email'].hasError('email')" class="invalid-feedback">
+      Invalid email format
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && formControls['password'].errors }">
+    <div *ngIf="submitted && formControls['password'].hasError('required')" class="invalid-feedback">
+      Password is required.
+    </div>
+    <div *ngIf="submitted && formControls['password'].hasError('minlength')" class="invalid-feedback">
+      Password should be at least 6 characters long.
+    </div>
+    <div *ngIf="submitted && formControls['password'].hasError('maxlength')" class="invalid-feedback">
+      Password should not exceed 10 characters.
+    </div>
+    <div *ngIf="submitted && formControls['password'].hasError('pattern')" class="invalid-feedback">
+      Password should be a combination of letters, numbers, and a special character.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid || !loginForm.touched">Login</button>
+</form>

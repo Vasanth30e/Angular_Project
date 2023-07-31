@@ -1,0 +1,17 @@
+<h2>Orders</h2>
+
+<div *ngFor="let order of orders" class="order-container">
+  <div class="order-details">
+    <div> {{ order.firstName }} {{ order.lastName }}</div>
+    
+  </div>
+  <div class="product-details">
+    <div><span class="product-name">{{ order.products[0].name }}</span> {{ order.products[0].price }}</div>
+    
+    <div><span class="product-name">{{ order.products[1].name }}</span> {{ order.products[1].price }}</div>
+    <hr>
+    <div><span class="total">{{ calculateOrderTotal(order) }}</span>
+      </div>
+  </div>
+</div>
+

@@ -1,0 +1,32 @@
+{
+    "customers":[
+        {
+            "id": 1,
+            "firstName": "Ted",
+            "lastName": "James",
+            "Address": "1234 Anywhere St.",
+            "City": "Phoenix",
+            "Order Total": "$207.98",
+            "orders":[
+                {
+                    "Basketball": "$7.99",
+                    "Shoes": "$199.99"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "firstName": "Michelle",
+            "lastName": "Thompson",
+            "Address": "345 Cedar Point Ave.",
+            "City": "Encinitas",
+            "Order Total": "$8.98",
+            "orders":[
+                {
+                    "Frisbee": "$2.99",
+                    "Hat": "$5.99"
+                }
+            ]
+        }
+    ]
+}
